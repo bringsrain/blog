@@ -1,0 +1,25 @@
+title: Blog - Start Late in Life
+url: "http://blog.startlateinlife.myid"
+
+plugins:
+  - jekyll-asciidoc
+
+asciidoc:
+  attributes:
+    imagesdir: /assets/images
+  excerpt_separator: "\n//more\n"
+
+collections:
+  starlateinvim:
+    output: true
+
+defaults:
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+  - scope:
+      path: ""
+    values:
+      layout: "default"

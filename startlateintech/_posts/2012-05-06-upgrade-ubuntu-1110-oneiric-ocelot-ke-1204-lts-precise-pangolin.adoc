@@ -1,0 +1,112 @@
+= Upgrade Ubuntu 11.10 Oneiric Ocelot ke 12.04 (LTS) Precise Pangolin
+:author: Ari S. Diutri
+:revdate: 2012-05-06
+:icons: font
+:imagesdir: /assets/images
+:category: StartLateInTech
+
+
+== Upgrade Ubuntu 11.10 Oneiric Ocelot ke 12.04 (LTS) Precise Pangolin
+
+NOTE: Arsip tulisan dari blog lama yang masih terselamatkan.
+
+Saya baru saja upgrade distro ubuntu dari seri 11.10 Oneiric Ocelot ke 12.04 LTS (Long Term Service) Precise Pangolin. Dan ini adalah pertama kalinya bagi saya, karena 12.04 adalah seri Distro Ubuntu yang kedua yang saya pergunakan.
+
+Karna itu saya ingin sekali berbagi pengalaman ini, mudah-mudahan bisa menjadi bahan bacaan yang berguna.
+
+//more
+WARNING: Tulisan di bawah dibuat berdasarkan pengalaman pribadi. Mohon maaf jika ada hal-hal yang belum bisa saya jelaskan karena keterbatasan pengetahuan.
+
+=== Langkah-Langkah Yang Saya Lakukan
+
+==== Mencari informasi tentang OS saya sebelumnya (Ubuntu 11.10), dan segala macam permasalahannya sebelum, selama dan setelah Upgrade ke Ubuntu 12.04.
+
+. Hal yang pertama kali saya cari tahu sebelum upgrade OS adalah pengaruhnya terhadap proprietary driver. Karna saya menggunakan VGA card Mobility Ati Radeon HD 550v/4650 dan WiFi Broadcom yang sering sekali dibilang bermasalah dengan linux.
++
+Saya menemukan banyak informasi tentang driver VGA ati dan sedikit tentang WiFi Broadcom.Maka saya memutuskan untuk menghapus fglrx driver saya.
++
+--
+* Ketik perintah berikut pada Terminal :
++
+[source]
+----
+sudo sh / usr / share / ati / fglrx-uninstall.sh
+sudo apt-get remove - purge fglrx fglrx_ * fglrx-amdcccle * fglrx-dev *
+----
+* Lalu reboot komputer.
+--
+
+. Hal kedua yang saya cari tahu adalah tentang Desktop Environment.
++
+Pada Ubuntu 11.10 saya menggunakan Gnome3 sebagai default DE saya.
+Waktu jalan-jalan di http://ubuntuforums.org/[forum] banyak posting tentang Gnome3 error setelah upgrade. Dengan berat hati gnome3 pun saya tinggalkan bersama dengan oneiric. Tidak banyak keterangan yang saya temukan karena saya tidak begitu mahir bahasa inggris dan masih sering mengandalkan google terjemah.
+
+Diluar segala perdebatan tentang Unity dan Gnome hanya karena faktor kebiasaan saja, saya lebih memilih Gnome3 DE pada Ubuntu 11.10. Saya yakin Unity akan membuat kemajuan besar pada edisi Ubuntu 12.04dan saya mendukungnya, karna saya bukanlah seorang fanatik.
+
+untuk tambahan referensi mungkin anda ingin melihat https://launchpad.net/%7Egnome3-team/+archive/gnome3[halaman ini] terlebih dahulu.
+
+==== Upgrade OS Ubuntu melalui Update Manager.
+
+Sebelum melakukan upgrade biasakanlah untuk membuat back-up data-data penting. Yakinlah, back-up data sangatlah berguna jika mengalami masalah-masalah yang pelik setelah upgrade.
+
+Berikut cara upgradenya :
+
+. Buka Dash dengan cara klik icon dash di sebelah kiri atas unity launcher atau tekan tombol super/windows.
+. Search Update Manager.
+. Klik tombol upgrade di sebelah kata-kata : "New Ubuntu release"12.04 LTS" is available".
++
+image::2012-05-06-ugrade_upd_mgr.png[]
+
+. Tunggu hingga seluruh proses selesai, lalu reboot komputer.
+. Lalu ketik lah command berikut terminal :
++
+[source]
+----
+lsb_release -a
+----
+
+. Jika outputnya seperti berikut maka upgrade berhasil :
++
+[source]
+----
+No LSB modules are available.
+Distributor ID:    Ubuntu
+Description:    Ubuntu 12.04 LTS
+Release:    12.04
+Codename:    precise
+----
+
+==== Hal-hal penting dilakukan setelah upgrade.
+
+===== Update Ubuntu 12.04, menggunakan Update manager.
+
+
+Bukalah Update Manager seperti cara diatas sewaktu upgrade.
+Klik tombol Check, tunggu hingga prosesnya selesai kemudian klik tombol Install Updates.
+
+Atau dengan Command Line, ketikkan code berikut pada terminal:
+
+[source]
+----
+sudo apt-get update
+sudo apt-get  dist-upgrade atau sudo apt-get upgrade
+----
+
+===== Install Proprietary Driver.
+
+Karena saya telah menghapus seluruh "fglrx driver" untuk VGA ati radeon HD 550v maka instalasi driver ini adalah langkah penting kedua saya setelah upgrade.
+
+Proprietary driver saya yang kedua adalah WiFi Broadcom, yang saya beranikan untuk tidak uninstall karena ini adalah media koneksi internet yang saya gunakan selama proses upgrade. Saya juga tidak menemukan tulisan yang banyak dan signifikan tentang masalah yang terjadi dengan WiFi ini setelah upgrade. Sesuai dengan harapan saya Driver WiFi Broadcom saya langsung terbaca tanpa masalah setelah upgrade.
+
+===== Kustomisasi Ubuntu 12.04 sesuai kebutuhan dan kenyamanan masing-masing.
+
+Untuk langkah ini tidaklah terlalu banyak hal yang saya lakukan, karena saya bukan seorang linux user yang ahli, melainkan hanya user reguler saja. Seluruh settingan default Ubuntu 12.04 (LTS) Precise Pangolin sudah mencukupi buat saya. dan kebanyakan software-software yang saya perlukan sudah terinstal dan terkustomisasi semenjak awal saya menggunakan Ubuntu 11.10 Oneiric.
+
+Satu-satunya yang ingin saya kustomisasi jika ada kesempatan, adalah menginstal kembali Gnome3 sebagai default DE untuk saya. Karna sebelumnya sudah terbiasa dengan fitur-fiturnya selama menggunakan Ubuntu 11.10 Oneiric. Tapi sampai pada saat itu, saya akan memberikan kesempatan untuk diri saya mengenal Unity Desktop yang telah mengalami kemajuan pesat dibandingkan Unity pada Ubuntu 11.10.
+
+=== Jika Diperlukan
+
+Fresh install Ubuntu 12.04 (LTS) Precise Pangolin.
+Jika terjadi hal-hal yang tidak diinginkan saat atau setelah upgrade dan tidak bisa untuk di fix lagi maka ini adalah langkah terakhir yang patut diambil setelah sebelumnya memback-up dulu seluruh data-data penting.
+
+Sekian. Semoga tulisan ini bisa bermanfaat bagi pembaca sekalian. Saya sangat mengharapkan komentar, pesan, saran dan koreksi dari teman-teman.
