@@ -27,12 +27,11 @@ jobs:
         run: |
           JEKYLL_ENV=production bundle exec jekyll build
 
+      - name: Start SSH agent
+        uses: webfactory/ssh-agent@v0.5.3
+        with:
+          ssh-private-key: ${{ secrets.SSH_PRIVATE_KEY }}
+
       - name: Deploy to VPS
-        env:
-          SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
-          VPS_HOST: ${{ secrets.VPS_HOST }}
-          VPS_USER: ${{ secrets.VPS_USER }}
-          VPS_DEPLOY_DIR: ${{ secrets.VPS_DEPLOY_DIR }}
         run: |
-          echo "$SSH_PRIVATE_KEY" | tr -d '\r' | ssh-add -  /dev/null
-          rsync -avz --delete -e "ssh -p ${{ secrets.SSH_PORT }}" _site/ $VPS_USER@$VPS_HOST:$VPS_DEPLOY_DIR
+          rsync -avz --delete -e "ssh -p ${{ secrets.SSH_PORT }}" _site/ ${{ secrets.VPS_USER }}@${{ secrets.VPS_HOST }}:${{ secrets.VPS_DEPLOY_DIR }}
