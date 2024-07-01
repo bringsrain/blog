@@ -1,0 +1,5 @@
+sample.adoc
+.bundle/
+_site/
+.jekyll-cache/
+**/_drafts/
