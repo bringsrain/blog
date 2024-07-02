@@ -1,0 +1,19 @@
+= Unregister dll files
+:author: Ari S. Diutri
+
+== Unregister Dll Files
+
+Artikel ini saya tulis sebagai _reminder_ juga buat saya, yang kebetulan sering keluar masuk warnet. :D +
+Seringkali kita temui folder-folder yang tidak bisa dihapus, karna di dalamnya ada "file dll yang masih running atau teregister pada windows" (ini interprestasi sendiri, saya mohon koreksinya). untuk menghapus dll file tersebut kita harus _unregister_ terlebih dahulu.
+//more
+
+Caranya :
+
+* Klik Start
+* Klik Run
+* Ketik `regsvr32 /u [lokasi file dll]` atau `regsvr32 -u [lokasi file dll]`
+* Klik [OK] atau Tekan [Enter]
+
+Sekian artikel singkat ini semoga bermanfaat buat teman-teman semua.
+
+Referensi https://support.microsoft.com/kb/249873[]

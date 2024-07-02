@@ -1,0 +1,24 @@
+= Disable/Matikan chkdsk/scandisk waktu booting windows XP
+:author: Ari S. Diutri
+
+Kalau nyalain komputer sering nongol check disk?, atau bahkan selalu check disk?. +
+Sedangkan kita merasa data kita tidak ada yang corrupt atau rusak, hmmm... dimatiin aja kali ya? ^_^
+//more
+
+Caranya :
+
+* Klik [Start]
+* Klik [Run]
+* Ketik : `chkntfs /x c:` jika hanya satu partisi, atau `chkntfs /x c: d: x:`. Sesuaikan dengan partisi drive masing-masing.
+
+Kalau Shortcut "Run" pada "Start Menu" didisable :
+
+* Klik [Start]
+* Klik [All Program]
+* Klik [Accessories]
+* Klik [Command Prompt]
+* Ketik : `chkntfs /x c:` jika hanya satu partisi, atau `chkntfs /x c: d: x:`. Sesuaikan dengan partisi drive masing-masing.
+
+Restart PC atau komputer setelah mengeksekusi command ini.
+
+Semoga Bermanfaat.
