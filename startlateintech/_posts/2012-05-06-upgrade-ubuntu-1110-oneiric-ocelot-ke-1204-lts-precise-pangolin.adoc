@@ -8,8 +8,6 @@
 
 == Upgrade Ubuntu 11.10 Oneiric Ocelot ke 12.04 (LTS) Precise Pangolin
 
-NOTE: Arsip tulisan dari blog lama yang masih terselamatkan.
-
 Saya baru saja upgrade distro ubuntu dari seri 11.10 Oneiric Ocelot ke 12.04 LTS (Long Term Service) Precise Pangolin. Dan ini adalah pertama kalinya bagi saya, karena 12.04 adalah seri Distro Ubuntu yang kedua yang saya pergunakan.
 
 Karna itu saya ingin sekali berbagi pengalaman ini, mudah-mudahan bisa menjadi bahan bacaan yang berguna.
