@@ -1,0 +1,42 @@
+= Menggunakan RHEL Pada VM GCP Dengan Gratis
+:author: Ari S. Diutri
+:experimental:
+
+== Background Story
+
+Secara _default_ untuk menggunakan _image_ RHEL sebagai OS di VM GCP akan dikenakan biaya, karena RHEL termasuk ke dalam _image_ premium. Berikut _image-image_ premium merujuk pada dokumentasi GCP:
+//more
+
+* Red hat Enterprise Linux (RHEL and RHEL for SAP)
+* SUSE Linux Enterprise Server (SLES and SLES for SAP)
+* Ubuntu Pro
+* Windwos Server
+* SQL Server
+
+Sebagai _kang oprek kere_, saya menggunakan GCP Trial buat _nge-lab_. Awalnya saya pikir semua _image_ premium tidak bisa digunakan sebagai OS untuk VM. Jadinya untuk oprekan yang berhubungan dengan RHEL saya biasanya menggunakan Rocky Linux. Ketika membaca ulang dokumentasi _"Free cloud features and trial offer"_, ternyata hanya Windows server saja yang menjadi batasan.
+
+Saat ingin membuat VM dengan _image_ RHEL, ada opsi _radio button_ yang menarik perhatian. _Bring your own subscription or license (BYOS or BYOL)_. Sebagai penggemar gratisan, tentu saja saya juga mendaftar program developers Red Hat yang memberikan benefit langganan gratis lisensi untuk individu. Lisensi individu ini bisa digunakan pada 16 mesin. Dengan opsi ini lumayan bisa mengurangi potongan pada kredit _trial_ yang diberikan GCP. Secara _default_ opsi ini di-_disable_. Setelah melakukan pencarian saya menemukan RHEL menyediakan fitur _"Cloud Access"_.
+
+== Mengkatifkan Fitur RHEL Cloud Access
+
+Cloud Access adalah fasilitas dari RHEL untuk integrasi _subscription_ dengan berbagai layanan _cloud_. Berikut langkah-langkah untuk mengaktifkannya:
+
+. Login ke https://developers.redhat.com[]
+. Klik foto profile pada kanan atas
+. Klik menu:Subcriptions[] pada menu popup
+. Klik menu:Cloud Access[] pada bagian atas halaman
+. Klik btn:[Enable a new provider] dan ikuti langkah-langkahnya
+. Selanjutnya tambahkan akun GCP yang akan dihubungkan
+
+.RHEL Cloud Access enabled.
+image::2024-07-18_00-59-rhel-cloud-access-enabled-products.png[]
+
+
+== Konfigurasi VM Boot Disk GCP
+
+Untuk menggunakan image RHEL bisa dilakukan dengan merubah konfigurasi Boot Disk saat membuat VM Instance baru di GCP
+
+.Konfigurasi Boot Disk
+image::2024-07-16_18-58-bootdisk-provisioning.png[]
+
+*Happy gratisan!*

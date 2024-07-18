@@ -1,0 +1,44 @@
+= Suspend Billing Client PCMan dan PikaBilling
+:author: Ari S. Diutri
+
+== Atasi User Curang
+
+PCMan dan PikaBilling adalah salah satu billing yang sangat bagus menurut saya pribadi untuk digunakan pada warnet. Salah satu fiturnya yang paling baik adalah manajemen warnetnya. Fitur ini bisa dibilang lengkap.Dan billing ini "GRATIS".
+//more
+
+"Tidak ada yang sempurna" +
+Yup, billing ini masih punya kelemahan dari sisi client, jika warnet tidak berada dalam satu ruangan atau menggunakan bilik/sekat PC dan Operatornya kurang waspada (Biasanya OP suka sibuk Facebookan bahkan main game di PC Billing dan tidak perhatikan billing bisa-bisa user iseng dan "Suspend Process" "PikaClient"nya.
+
+Program yang sering dipakai :
+
+* Smadav (Menggunakan fitur Process Managernya)
+* Process Hacker
+* Process XP atau Process Explorer
+* Security Task Manager
+* Injector buat Cheat Point Blank
+* dan semua Software yang memiliki fitur Process manager yang bisa suspend.
+
+Solusi halus :
+
+* Blok Semua Software yang memiliki fitur "Suspend Process"
+
+Solusi Keras :
+
+* Yang paling penting "Kejelian Operator". Salah satu kelebihan billing ini adalah waktu di Server billing selalu benar.   Bila waktu di server sudah habis dan user masih terus bermain datangi dan tegurlah.
+* Jika Operator "Kurang enak" untuk menegur dengan keras dan biar usernya juga ga kapok main di warnet bilang saja :
++
+"Mas/Mbak/Bro/Cuy, maaf ya waktunya sudah habis kayanya billing error deh"
++
+Kadang-kadang ada user yang "ngeyel"
++
+"Tapi ini belum mati kok mas"
++
+Hmmm... "Julurkan tangan anda dan pencet tombol reset, jika warnet anda menggunakan Deepfreze atau Shadow Defender dan program sejenis maka pc akan restart dan kembali ke stat awal, billing normal kembali dijamin kelar urusannya" ^_^
+
+Kalau pengalaman pribadi saya ketemu user yang udah berkali-kali melakukan hal yang sama :
+
+> Saya : "Mas itu mau dimatikan sendiri atau mau saya suruh bayar personal?"
+
+> User : "Buru-buru nutup semua window yang ada dan ngeloyor pergi" +^_^+
+
+_Jangan takut kehilangan user curang, karena masih banyak user jujur yang mau main di warnet selama pelayanan dan fasilitas nyaman._
